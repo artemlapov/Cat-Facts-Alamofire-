@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		6E22426629213AE600A5387E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E22426529213AE600A5387E /* AppDelegate.swift */; };
 		6E22426829213AE600A5387E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E22426729213AE600A5387E /* SceneDelegate.swift */; };
-		6E22426A29213AE600A5387E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E22426929213AE600A5387E /* ViewController.swift */; };
+		6E22426A29213AE600A5387E /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E22426929213AE600A5387E /* CatViewController.swift */; };
 		6E22426D29213AE600A5387E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E22426B29213AE600A5387E /* Main.storyboard */; };
 		6E22426F29213AE700A5387E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E22426E29213AE700A5387E /* Assets.xcassets */; };
 		6E22427229213AE700A5387E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E22427029213AE700A5387E /* LaunchScreen.storyboard */; };
+		6E22427D29213B5D00A5387E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E22427C29213B5D00A5387E /* NetworkManager.swift */; };
+		6E22428029213B8B00A5387E /* CatFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E22427F29213B8B00A5387E /* CatFact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E22426229213AE600A5387E /* Cat Facts (Alamofire).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cat Facts (Alamofire).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E22426529213AE600A5387E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E22426729213AE600A5387E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E22426929213AE600A5387E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E22426929213AE600A5387E /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		6E22426C29213AE600A5387E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E22426E29213AE700A5387E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E22427129213AE700A5387E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E22427329213AE700A5387E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E22427C29213B5D00A5387E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6E22427F29213B8B00A5387E /* CatFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		6E22426429213AE600A5387E /* Cat Facts (Alamofire) */ = {
 			isa = PBXGroup;
 			children = (
-				6E22426529213AE600A5387E /* AppDelegate.swift */,
-				6E22426729213AE600A5387E /* SceneDelegate.swift */,
-				6E22426929213AE600A5387E /* ViewController.swift */,
-				6E22426B29213AE600A5387E /* Main.storyboard */,
 				6E22426E29213AE700A5387E /* Assets.xcassets */,
-				6E22427029213AE700A5387E /* LaunchScreen.storyboard */,
-				6E22427329213AE700A5387E /* Info.plist */,
+				6E22427929213B0600A5387E /* App */,
+				6E22427B29213B3B00A5387E /* ViewControllers */,
+				6E22427A29213B2C00A5387E /* Storyboards */,
+				6E22427E29213B6D00A5387E /* Services */,
+				6E22428129213B8F00A5387E /* Models */,
 			);
 			path = "Cat Facts (Alamofire)";
+			sourceTree = "<group>";
+		};
+		6E22427929213B0600A5387E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6E22426529213AE600A5387E /* AppDelegate.swift */,
+				6E22426729213AE600A5387E /* SceneDelegate.swift */,
+				6E22427329213AE700A5387E /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6E22427A29213B2C00A5387E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6E22426B29213AE600A5387E /* Main.storyboard */,
+				6E22427029213AE700A5387E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6E22427B29213B3B00A5387E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E22426929213AE600A5387E /* CatViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6E22427E29213B6D00A5387E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6E22427C29213B5D00A5387E /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6E22428129213B8F00A5387E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E22427F29213B8B00A5387E /* CatFact.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E22426A29213AE600A5387E /* ViewController.swift in Sources */,
+				6E22427D29213B5D00A5387E /* NetworkManager.swift in Sources */,
+				6E22426A29213AE600A5387E /* CatViewController.swift in Sources */,
 				6E22426629213AE600A5387E /* AppDelegate.swift in Sources */,
+				6E22428029213B8B00A5387E /* CatFact.swift in Sources */,
 				6E22426829213AE600A5387E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BQRU8RM77X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Cat Facts (Alamofire)/Info.plist";
+				INFOPLIST_FILE = "Cat Facts (Alamofire)/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BQRU8RM77X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Cat Facts (Alamofire)/Info.plist";
+				INFOPLIST_FILE = "Cat Facts (Alamofire)/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
